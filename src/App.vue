@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "App",
   components: {},
@@ -39,8 +41,11 @@ export default {
     };
   },
   methods: {
-    getWeather: (args) => {
-      console.log(args);
+    getWeather: () => {
+      axios({
+        url: this.url_base + this.query + this.apikey,
+        method: "GET",
+      });
     },
   },
 };
