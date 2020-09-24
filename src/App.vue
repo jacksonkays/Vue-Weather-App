@@ -1,5 +1,9 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <main>
+      <div></div>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -15,4 +19,7 @@ export default {
 </script>
 
 <style>
+#app {
+  background-image: url("https://i.pinimg.com/originals/08/fb/5e/08fb5e3d2374934e9296985d67bc8539.png");
+}
 </style>
