@@ -2,7 +2,12 @@
   <div id="app">
     <main>
       <div class="search-box">
-        <input type="text" class="search-bar" placeholder="Search" />
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Search"
+          v-model="query"
+        />
       </div>
 
       <div class="weather-wrap">
