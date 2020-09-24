@@ -11,7 +11,7 @@
         />
       </div>
 
-      <div class="weather-wrap">
+      <div class="weather-wrap" v-if="weather != undefined">
         <div class="location-box">
           <div class="location">Missouri City, TX</div>
           <div class="date">September 24th, 2020</div>
@@ -37,7 +37,7 @@ export default {
       apikey: "c5c79b96574ee79d056863bb8ee0534d",
       url_base: "https://api.openweathermap.org/data/2.5/weather?q=",
       query: "",
-      weather: {},
+      weather: undefined,
     };
   },
   methods: {
