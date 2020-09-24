@@ -43,11 +43,11 @@ export default {
   methods: {
     getWeather() {
       axios({
-        url: this.url_base + this.query + this.apikey,
+        url: this.url_base + this.query + "&appid=" + this.apikey,
         method: "GET",
       })
         .then((res) => {
-          this.weather = res;
+          this.weather = res.data;
         })
         .catch((err) => {
           console.log(err);
