@@ -76,7 +76,7 @@ body {
   transition: 0.4s;
 }
 #app.warm {
-  background-image: url("https://i.pinimg.com/originals/08/fb/5e/08fb5e3d2374934e9296985d67bc8539.png");
+  background-image: url("https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot08-1920x1080-f327e290631037ad201a68b624b30aab.jpg");
 }
 main {
   min-height: 100vh;
