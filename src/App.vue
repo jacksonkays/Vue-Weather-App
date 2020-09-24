@@ -13,13 +13,15 @@
 
       <div class="weather-wrap" v-if="weather != undefined">
         <div class="location-box">
-          <div class="location">Missouri City, TX</div>
-          <div class="date">September 24th, 2020</div>
+          <div class="location">
+            {{ weather.name }}, {{ weather.sys.country }}
+          </div>
+          <div class="date">{{ new Date() }}</div>
         </div>
 
         <div class="weather-box">
-          <div class="temp">25F</div>
-          <div class="weather">Sunny</div>
+          <div class="temp">{{ Math.round(weather.main.temp) }}°F</div>
+          <div class="weather">{{ weather.weather[0].main }}</div>
         </div>
       </div>
     </main>
@@ -43,7 +45,8 @@ export default {
   methods: {
     getWeather() {
       axios({
-        url: this.url_base + this.query + "&appid=" + this.apikey,
+        url:
+          this.url_base + this.query + "&units=imperial&appid=" + this.apikey,
         method: "GET",
       })
         .then((res) => {
