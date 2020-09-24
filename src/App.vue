@@ -7,7 +7,7 @@
           class="search-bar"
           placeholder="Search"
           v-model="query"
-          @keyup.enter="getWeather(query)"
+          @keyup.enter="getWeather"
         />
       </div>
 
@@ -41,11 +41,17 @@ export default {
     };
   },
   methods: {
-    getWeather: () => {
+    getWeather() {
       axios({
         url: this.url_base + this.query + this.apikey,
         method: "GET",
-      });
+      })
+        .then((res) => {
+          this.weather = res;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
 };
