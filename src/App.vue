@@ -7,7 +7,7 @@
           class="search-bar"
           placeholder="Search"
           v-model="query"
-          @keyup.enter="getWeather"
+          @keyup.enter="getWeather(query)"
         />
       </div>
 
@@ -37,6 +37,11 @@ export default {
       query: "",
       weather: {},
     };
+  },
+  methods: {
+    getWeather: (args) => {
+      console.log(args);
+    },
   },
 };
 </script>
