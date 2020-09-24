@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="warm">
     <main>
       <div class="search-box">
         <input
@@ -40,6 +40,7 @@ export default {
       url_base: "https://api.openweathermap.org/data/2.5/weather?q=",
       query: "",
       weather: undefined,
+      warm: false,
     };
   },
   methods: {
@@ -51,6 +52,11 @@ export default {
       })
         .then((res) => {
           this.weather = res.data;
+          if (this.weather.main.temp > 60) {
+            this.warm = "warm";
+          } else {
+            this.warm = undefined;
+          }
         })
         .catch((err) => {
           console.log(err);
