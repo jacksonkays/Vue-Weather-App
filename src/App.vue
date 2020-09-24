@@ -4,6 +4,15 @@
       <div class="search-box">
         <input type="text" class="search-bar" placeholder="Search" />
       </div>
+
+      <div class="weather-wrap">
+        <div class="location-box">
+          <div class="location">Missouri City, TX</div>
+          <div class="date">September 24th, 2020</div>
+          <div class="temperature">25F</div>
+          <div class="weather">Sunny</div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
